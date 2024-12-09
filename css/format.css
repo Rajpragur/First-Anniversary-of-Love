@@ -118,6 +118,8 @@
 	margin: auto;
 	width: auto;
 	height: 100%;
+	border: 4px solid pink;
+	border-radius: 15 px;
 }
 
 #Txt{
