@@ -8,7 +8,7 @@
 	</head>
 
 	<body style="margin:0px">
-		<audio id="bgMusic" autoplay loop>
+		<audio id="bgMusic" loop>
 			<source src="music/music.mp3" type="audio/mpeg">
 			Your browser does not support the audio.
 		</audio>
@@ -54,13 +54,14 @@
 			var t = 0;
 		</script>
 		<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const audio = document.getElementById("bgMusic");
-        audio.play().catch(error => {
-            console.log("Autoplay blocked: User interaction required.");
-        });
-    });
-</script>
+    			document.body.addEventListener("click", function () {
+        		const audio = document.getElementById("bgMusic");
+        		audio.play().then(() => {
+            			console.log("Audio playback started!");
+        		}).catch(error => {
+            			console.error("Playback failed:", error);
+        		});}, { once: true })
+		</script>
 		<script type="text/javascript" src="./js/stars.js"></script>
 		<script type="text/javascript" src="./js/typeWriter.js"></script>
 		<script type="text/javascript" src="./js/date.js"></script>
