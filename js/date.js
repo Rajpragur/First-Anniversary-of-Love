@@ -1,5 +1,5 @@
 // Target date for the proposal
-var start = new Date(2024, 11, 7, 20, 0); // 11 = December (Months are 0-indexed)
+var start = new Date(2024, 11, 7, 17, 0); // 11 = December (Months are 0-indexed)
 var dv = document.getElementById("content");
 dv.style.opacity = 0;
 var val = 0;
